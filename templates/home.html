@@ -14,16 +14,16 @@
         {% endif %}
     </head>
     <body>
-        <h1>Formula One Plaette</h1>   
+        <h1>Formula One Leaderboard</h1>   
         <table>
             <tr>
               <th>Constructor</th>
-              <th>Code</th>
+              <th>PTS</th>
             </tr>
             {% for team in leaderboard %}
                 <tr>
                     <th>{{team["team"]}}</th>
-                    <th>Code</th>
+                    <th>{{team["pts"]}}</th>
                 </tr>
             {% endfor %}
           </table>
