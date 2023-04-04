@@ -15,17 +15,6 @@
     </head>
     <body>
         <h1>Formula One Leaderboard</h1>   
-        <table>
-            <tr>
-              <th>Constructor</th>
-              <th>PTS</th>
-            </tr>
-            {% for team in leaderboard %}
-                <tr>
-                    <th>{{team["team"]}}</th>
-                    <th>{{team["pts"]}}</th>
-                </tr>
-            {% endfor %}
-          </table>
+        {% block content %}{% endblock %}
     </body>
 </html>

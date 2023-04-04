@@ -1,0 +1,17 @@
+{% extends "layout.html" %}
+{% block content %}
+<table>
+    <tr>
+      <th>POS</th>
+      <th>TEAM</th>
+      <th>PTS</th>
+    </tr>
+    {% for idx, team in enumerate(leaderboard) %}
+        <tr>
+            <th>{{str(idx+1)}}</th>
+            <th>{{team["team"]}}</th>
+            <th>{{team["pts"]}}</th>
+        </tr>
+    {% endfor %}
+</table>
+{% endblock content %}
