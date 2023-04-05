@@ -5,39 +5,39 @@ constructor_leaderboard = [
   },
   {
     "team": 'ASTON MARTIN ARAMCO MERCEDES',
-    "pts": 123,
+    "pts": 65,
   },
   {
     "team": 'MERCEDES',
-    "pts": 123,
+    "pts": 56,
   },
   {
     "team": 'FERRARI',
-    "pts": 123,
+    "pts": 26,
   },
   {
     "team": 'MCLAREN MERCEDES',
-    "pts": 123,
+    "pts": 12,
   },
   {
     "team": 'ALPINE RENAULT',
-    "pts": 123,
+    "pts": 8,
   },
   {
     "team": 'HAAS FERRARI',
-    "pts": 123,
+    "pts": 7,
   }, 
   {
     "team": 'ALFA ROMEO FERRARI',
-    "pts": 123,
+    "pts": 6,
   },
   {
     "team": 'ALPHATAURI HONDA RBPT',
-    "pts": 123,
+    "pts": 1,
   },
   {
     "team": 'WILLIAMS MERCEDES',
-    "pts": 123,
+    "pts": 1,
   },
 ]
 
