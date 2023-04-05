@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+<h1>2023 Formula One Driver Standings</h1>
 <table>
     <tr>
       <th>POS</th>
@@ -8,9 +9,13 @@
     </tr>
     {% for idx, driver in enumerate(leaderboard) %}
         <tr>
-            <th>{{str(idx+1)}}</th>
-            <th>{{driver["driver"]}}</th>
-            <th>{{driver["pts"]}}</th>
+            <td class="position">{{str(idx+1)}}</td>
+            <td class="driver">
+                {{driver["driver"].split(" ")[0]}}
+                <strong>{{driver["driver"].split(" ")[1]}}</strong>
+                <span>{{driver["team"]}}</span>
+            </td>
+            <td class="position">{{driver["pts"]}}</td>
         </tr>
     {% endfor %}
 </table>

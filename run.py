@@ -9,12 +9,14 @@ app = Flask(__name__)
 @app.route("/constructor_leaderboard")
 def home():
     return render_template('constructor.html', leaderboard = constructor_leaderboard, 
+                           title = "Constructor Leaderboard",
                            enumerate=enumerate,
                            str = str)
 
 @app.route("/driver_leaderboard")
 def driver():
     return render_template('driver.html', leaderboard = driver_leaderboard, 
+                           title = "Driver Leaderboard",
                            enumerate=enumerate,
                            str = str)
 

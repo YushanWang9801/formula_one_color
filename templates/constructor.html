@@ -1,5 +1,6 @@
 {% extends "layout.html" %}
 {% block content %}
+<h1>2023 Formula One Constructor Standings</h1>
 <table>
     <tr>
       <th>POS</th>
@@ -8,9 +9,11 @@
     </tr>
     {% for idx, team in enumerate(leaderboard) %}
         <tr>
-            <th>{{str(idx+1)}}</th>
-            <th>{{team["team"]}}</th>
-            <th>{{team["pts"]}}</th>
+            <td class="position">{{str(idx+1)}}</td>
+            <td class="driver">
+                <strong>{{team["team"]}}</strong>
+            </td>
+            <td class="position">{{team["pts"]}}</td>
         </tr>
     {% endfor %}
 </table>
