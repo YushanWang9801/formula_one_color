@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.3/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+</head>
+
+<body>
+
+    <div class="row">
+        <div class="col-sm-4 ">
+            <div class="title align-items-lg-end align-items-sm-start">
+                <h1>
+                    <small>Yushan Wang&rsquo;s</small>
+                    <span>Formula 1 <br> Dashboard </span>
+                </h1>
+            </div>
+        </div>
+
+        <div class="sidebar col-sm-8 col-md-8 mb-md-5">
+            <div class="standings d-flex flex-wrap justify-content-between ml-md-2">
+                <div class="col-md-1 col-sm-2">
+                    <h1 class="standingName">Standings</h1>
+                </div>
+                <div class="driver col-md-5 col-sm-5 flex-sm-column mb-2"> 
+                    <div class="driver-background">
+                        <div class="standing-title">
+                            <h2 id="Driver">Drivers</h2>
+                        </div>
+                    </div> 
+                </div>
+                <div class="constructor col-md-5 col-sm-5 flex-sm-column mb-2">
+                    <div class="constructor-background">
+                        <div class="standing-title">
+                            <h2 id="Constructor">Constructor</h2>
+                        </div>
+                    </div> 
+                </div>
+            </div>
+
+            <div class="comp mb-md-3 col-md-12" id="Calendar">
+                <h1>Race Calendar</h1>
+                <img src="{{ url_for('static', filename='images/calendar.jpg') }}" 
+                    alt="Calendar Cover Image">
+            </div>
+
+            <div class="comp col-md-12" id="Design">
+                <h1>Visual Design</h1>
+                <img src="{{ url_for('static', filename='images/design.jpg') }}" 
+                    alt="Visual Design Cover Image">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

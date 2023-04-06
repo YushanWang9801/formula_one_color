@@ -6,8 +6,11 @@ app = Flask(__name__)
 
 @app.route("/")
 @app.route("/home")
-@app.route("/constructor_leaderboard")
 def home():
+    return render_template('index.html')
+
+@app.route("/constructor_leaderboard")
+def constructor():
     return render_template('constructor.html', leaderboard = constructor_leaderboard, 
                            title = "Constructor Leaderboard",
                            enumerate=enumerate,

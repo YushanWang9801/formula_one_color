@@ -1,0 +1,192 @@
+:root {
+  --gutter: clamp(1ch, 2.5vmax, 3ch);
+  --stack: clamp(1.25ex, 2.5vmax, 1.75ex);
+  --page-padding-inline: calc((100vw - min(90rem, 100vw - var(--gutter) * 3)) / 2);
+  --section-spacing: clamp(var(--stack) * 4, 10vmax, var(--stack) * 6);
+
+  --pt-double-canon: 4.600rem;
+  --pt-paragon: 1.666rem;
+  --pt-pica: 1.0rem;
+  --pt-bourgeois: 0.75rem;
+
+  font-family: "Archivo", system-ui, sans-serif;
+  font-size: clamp(100%, 90% + 0.5vw, 150%);
+  font-weight: 300;
+  line-height: 1.4;
+}
+
+@font-face {
+  font-family: f1;
+  src: url("./fonts/Formula1-Wide.otf");
+}
+
+*,
+*::before,
+*::after {
+  font-feature-settings: "kern";
+  font-kerning: normal;
+  -moz-osx-font-smoothing: grayscale !important;
+  -webkit-font-smoothing: antialiased !important;
+  box-sizing: border-box;
+}
+
+
+body {
+  display: grid;
+  gap: var(--section-spacing);
+  padding-inline: var(--page-padding-inline);
+  overflow-x: hidden;
+  color: #fff;
+  background-color: #111111;
+}
+
+div.title{
+  display: grid;
+  min-block-size: 100vh;
+  min-block-size: 100dvb;
+  padding-block: var(--section-spacing);
+}
+
+.title h1 {
+  display: grid;
+  font-weight: 900;
+  gap: 0.2ex;
+  align-content: center;
+  font-size: clamp(
+    var(--pt-paragon),
+    var(--pt-pica) + 3.125vw,
+    var(--pt-double-canon)
+  );
+  line-height: 1;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.title h1 small {
+  font-size: var(--pt-bourgeois);
+  font-weight: 450;
+  letter-spacing: 0.1em;
+  text-indent: -0.1ch;
+}
+
+.title h1 span {
+  text-indent: -0.325ch;
+}
+
+.title h1 span {
+  border-top: 10px solid #e10600;
+  border-top-right-radius: 25px;
+  border-right: 10px solid #e10600;
+  padding-right: 25px;
+}
+
+.sidebar {
+  height: 100%;
+}
+
+.standings{
+  height: 30vh;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  border-radius: 30px;
+}
+
+h1.standingName {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  height: 25vh;
+  font-size: 2.5vh;
+  font-family: f1, "Archivo", system-ui, sans-serif;
+  margin-top: 2vh;
+}
+
+div.standing-title {
+  padding: 30px 0 0 30px;
+}
+
+.driver {
+  background-color: #fff; /* set the background color of the container div */
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  color: #111111;
+}
+
+.driver-background {
+    background-image: url('images/seb.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: right bottom;
+    width: 100%;
+    height: 100%;
+}
+
+.constructor {
+  background-color: #fff; /* set the background color of the container div */
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  color: #111111;
+}
+
+.constructor-background {
+  background-image: url('images/constructor.png');
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  background-size: 80%;
+  width: 100%;
+  height: 100%;
+}
+
+h2 {
+  font-family: f1, "Archivo", system-ui, sans-serif;
+  font-size: 3vh;
+}
+
+.comp {
+  height: 30vh;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-transform: uppercase;
+  font-family: f1, "Archivo", system-ui, sans-serif;
+  border-radius: 30px;
+}
+
+.comp h1 {
+  font-size: clamp( 1.2rem,1.8rem,3.2rem);
+  color: #fff;
+}
+
+.comp img {
+  display: block; 
+  position: absolute;
+  opacity: 0.2;
+  width: 100%;
+  height: 30vh;
+  object-fit: cover;
+  border-radius: 30px;
+}
+
+
+
+
+
+
+@media (max-width: 800px) {
+  div.title{
+    display: grid;
+    padding-block: 0;
+    min-block-size: 20vh;
+  }
+
+  h1.standingName {
+    writing-mode: horizontal-tb;
+    text-orientation: mixed;
+    height: auto;
+    margin-top: -4vh;
+    font-size: var(--pt-pica);
+  }
+
+}
