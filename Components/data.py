@@ -97,47 +97,73 @@ driver_leaderboard = [
 
 colors = [
     {
-      "team": "RED BULL RACING HONDA RBPT",
+      "team": "RED BULL RACING",
       "primary": "#3671C6	",
+      "secondary": "#E30118",
+      "third": "#C0BFBF",
     },
     {
-      "team": "ASTON MARTIN ARAMCO MERCEDES",
-      "primary": "#358C75",
-
+      "team": "ASTON MARTIN",
+      # "primary": "#358C75",
+      "primary": "#00352F",
+      "secondary": "#00594F",
+      "third": "#CEDC00",
     },
     {
       "team": "MERCEDES",
-      "primary": "#6CD3BF",
+      "primary": "#00A19C",
+      # "primary": "#6CD3BF",
+      "secondary": "#80142B",
+      "third": "#C6C6C60",
     },
     {
       "team": "FERRARI",
       "primary": "#F91536",
+      "secondary": "#FFEB00",
+      "third": "#FFFFFF",
     },
     {
       "team": "MCLAREN MERCEDES",
-      "primary": "#F58020",
-
+      # "primary": "#F58020",
+      "primary": "#FF8000",
+      "secondary": "#47C7FC",
+      "third": "#FFFFFF",
     },
     {
       "team": "ALPINE RENAULT",
-      "primary": "#2293D1",
+      # "primary": "#2293D1",
+      "primary": "#005BA9",
+      "secondary": "#0078C1",
+      "third": "FD48C7",
 
     },
     {
       "team": "ALFA ROMEO FERRARI",
-      "primary": "#C92D4B",
+      # "primary": "#C92D4B",
+      "primary": "#981E32",
+      "secondary": "#295294",
+      "third": "#F9F9F8",
     },
     {
-      "team": "ALPHATAURI HONDA RBPT",
-      "primary": "#5E8FAA",
+      "team": "ALPHATAURI ",
+      # "primary": "#5E8FAA",
+      "primary": "#F1f3f4",
+      "secondary": "#DD0740",
+      "third": "#011321",
     },
     {
       "team": "HAAS FERRARI",
-      "primary": "#B6BABD",
+      # "primary": "#B6BABD",
+      "primary": "#F9F2F2",
+      "secondary": "#295294",
+      "third": "#F62039",
     },
     {
       "team": 'WILLIAMS MERCEDES',
-      "primary": "#37BEDD",
+      # "primary": "#37BEDD",
+      "primary": "#00A3E0",
+      "secondary": "#E40046",
+      "third": "#041E42",
     },
 ]
 
