@@ -19,23 +19,19 @@
                 </div>
             </div> 
         </div>
+    </div>
+
+    <div class="comp mb-md-3" id="Calendar">
+        <h1>Race Calendar</h1>
+        <img src="{{ url_for('static', filename='images/calendar.jpg') }}" 
+            alt="Calendar Cover Image">
+    </div>
+
+    <div class="comp " id="Design">
+        <h1>Visual Design</h1>
+        <img src="{{ url_for('static', filename='images/design.jpg') }}" 
+            alt="Visual Design Cover Image">
+    </div>
 </div>
-<div class="constructorBoard col-sm-8 col-md-8 mt-md-3">
-    <table>
-        <tr>
-        <th>POS</th>
-        <th>TEAM</th>
-        <th>PTS</th>
-        </tr>
-        {% for idx, team in enumerate(leaderboard) %}
-            <tr>
-                <td class="position">{{str(idx+1)}}</td>
-                <td class="board-comp">
-                    <strong>{{team["team"]}}</strong>
-                </td>
-                <td class="position">{{team["pts"]}}</td>
-            </tr>
-        {% endfor %}
-    </table>
 </div>
 {% endblock content %}

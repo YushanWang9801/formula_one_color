@@ -97,7 +97,6 @@ h1.standingName {
   height: 25vh;
   font-size: 2.5vh;
   font-family: f1, "Archivo", system-ui, sans-serif;
-  margin-top: 2vh;
 }
 
 div.standing-title {
@@ -163,16 +162,88 @@ h2 {
   display: block; 
   position: absolute;
   opacity: 0.2;
-  width: 100%;
+  width: 92%;
   height: 30vh;
   object-fit: cover;
   border-radius: 30px;
+  margin-left: 5%;
 }
 
 
 
 
 
+div.constructorBoard {
+  margin: 0rem 2rem;
+  position: relative;
+  max-width: 800px;
+  border-spacing: 0 1rem;
+  margin-left: 5rem;
+}
+
+div.constructorBoard:before {
+  position: absolute;
+  content: '';
+  right: calc(100% + 1.2rem);
+  top: 0;
+  height: 95%;
+  width: 1.2rem;
+  margin: 2.5% 0;
+
+  border-radius: 5px;
+  border: 1px solid #38383F;
+  background: repeating-linear-gradient(-45deg, #15151E 0px, #15151E 4px, #38383F 4px, #38383F 8px);
+}
+
+table tr > * {
+  text-align: center;
+  padding: 0.1rem;
+}
+
+table tr > *:nth-child(2) {
+  text-align: left;
+}
+
+table th {
+  font-weight: 300;
+  letter-spacing: 0.04rem;
+  font-size: 0.9rem;
+  color: #eee;
+  text-transform: uppercase;
+}
+
+table td.position {
+  font-weight: 500;
+}
+
+table td.board-comp {
+  padding-left: 1rem;
+  font-size: 1.1rem;
+  letter-spacing: 0.05rem;
+  margin: 1rem 0;
+  width: 100%;
+}
+
+table td.board-comp strong {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+table td.board-comp span {
+  text-transform: capitalize;
+  margin-left: 0.75rem;
+  font-size: 0.8rem;
+  color: #999;
+  letter-spacing: initial;
+}
+
+table td.gap span {
+  background: #38383F;
+  border-radius: 30px;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+}
 
 @media (max-width: 800px) {
   div.title{
@@ -189,4 +260,19 @@ h2 {
     font-size: var(--pt-pica);
   }
 
+  table tr > *:nth-child(3) {
+    display: none;
+  }
+
+  div.constructorBoard {
+    margin: 0 0;
+    position: relative;
+    max-width: 800px;
+    border-spacing: 0 1rem;
+    margin-top: 36vh;
+  }
+
+  div.constructorBoard::before{
+    display: none;
+  }
 }
