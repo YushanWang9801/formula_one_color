@@ -95,15 +95,59 @@ driver_leaderboard = [
 ]
 
 
-colors = {
-  "mercedes": '#00D2BE',
-  "ferrari": '#DC0000',
-  "redBull": '#1E41FF',
-  "renault": '#FFF500',
-  "racingPoint": '#F596C8',
-  "alfaRomeo": '#9B0000',
-  "toroRosso": '#469BFF',
-  "haas": '#BD9E57',
-  "mclaren": '#FF8700',
-  "williams": '#FFFFFF'
-}
+colors = [
+    {
+      "team": "RED BULL RACING HONDA RBPT",
+      "primary": "#3671C6	",
+    },
+    {
+      "team": "ASTON MARTIN ARAMCO MERCEDES",
+      "primary": "#358C75",
+
+    },
+    {
+      "team": "MERCEDES",
+      "primary": "#6CD3BF",
+    },
+    {
+      "team": "FERRARI",
+      "primary": "#F91536",
+    },
+    {
+      "team": "MCLAREN MERCEDES",
+      "primary": "#F58020",
+
+    },
+    {
+      "team": "ALPINE RENAULT",
+      "primary": "#2293D1",
+
+    },
+    {
+      "team": "ALFA ROMEO FERRARI",
+      "primary": "#C92D4B",
+    },
+    {
+      "team": "ALPHATAURI HONDA RBPT",
+      "primary": "#5E8FAA",
+    },
+    {
+      "team": "HAAS FERRARI",
+      "primary": "#B6BABD",
+    },
+    {
+      "team": 'WILLIAMS MERCEDES',
+      "primary": "#37BEDD",
+    },
+]
+
+  # "mercedes": '#00D2BE',
+  # "ferrari": '#DC0000',
+  # "redBull": '#1E41FF',
+  # "renault": '#FFF500',
+  # "racingPoint": '#F596C8',
+  # "alfaRomeo": '#9B0000',
+  # "toroRosso": '#469BFF',
+  # "haas": '#BD9E57',
+  # "mclaren": '#FF8700',
+  # "williams": '#FFFFFF'
