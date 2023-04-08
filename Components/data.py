@@ -114,7 +114,7 @@ colors = [
       "primary": "#00A19C",
       # "primary": "#6CD3BF",
       "secondary": "#80142B",
-      "third": "#C6C6C60",
+      "third": "#C6C6C6",
     },
     {
       "team": "FERRARI",
@@ -134,7 +134,7 @@ colors = [
       # "primary": "#2293D1",
       "primary": "#005BA9",
       "secondary": "#0078C1",
-      "third": "FD48C7",
+      "third": "#FD48C7",
 
     },
     {
