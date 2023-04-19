@@ -1,13 +1,22 @@
 import './App.css'
+import data from "./assets/data.json"
+import Color from "./Components/color"
 
 function App() {
   return (
-    <header aria-label="Masthead">
-      <h1>
-        <small>Yushan Wang&rsquo;s</small>
-        <span>Formula 1<br />Dashboard</span>
-      </h1>
-    </header>
+    <div className="app">
+      <div className="title">
+        <h1>
+          <a href="http://yushanwang9801.github.io">
+            <small>Yushan Wang&rsquo;s</small><br />
+          </a>
+          <div>Formula 1 Dashboard</div>
+        </h1>
+      </div>
+      <div className="colorboard">
+        {data.map((d) => <Color team={d} />)}
+      </div>
+    </div>
   );
 }
 

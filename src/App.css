@@ -1,0 +1,162 @@
+@font-face {
+    font-family: f1-bold;
+    src: url("./assets/Formula1-Bold.ttf");
+}
+
+@font-face {
+    font-family: f1;
+    src: url("./assets/Formula1-Regular.ttf");
+}
+
+/* @font-face {
+    font-family: f1-wide;
+    src: url("./assets/Formula1-Wide.ttf");
+} */
+
+@font-face {
+    font-family: optima;
+    src: url("./assets/Optima.ttf");
+}
+
+*,
+*::before,
+*::after {
+    font-feature-settings: "kern";
+    font-kerning: normal;
+    -moz-osx-font-smoothing: grayscale !important;
+    -webkit-font-smoothing: antialiased !important;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    border: 0;
+    background-color: #111111;
+    color: #fff;
+    font-family: f1, f1-bold, Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+}
+
+.app {
+    position: relative;
+    height: 100vh; /* set the height to fill the viewport */
+    overflow-y: hidden;
+}
+
+.title {
+    font-weight: 900;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+
+    position: fixed;
+    bottom: 0;
+    left: 1vh;
+    font-size: 1.3vw;
+}
+
+.title h1 a{
+    text-decoration: none;
+}
+
+.title h1 small {
+    font-weight: 450;
+    letter-spacing: 0.1em;
+    text-indent: -0.1ch;
+    font-family: optima, f1, f1-bold, f1-wide,
+        Verdana, Geneva, Tahoma, sans-serif;
+    color: #00a19c;
+}
+
+.title h1 div {
+    text-indent: 0.525ch;
+    border-top: 10px solid #e10600;
+    border-top-right-radius: 25px;
+    border-right: 10px solid #e10600;
+    padding-right: 10px;
+    margin-right: 20px;
+}
+
+.colorboard {
+    height: 95vh;
+    margin: 2.5vh 0;
+    width: 50%;
+    position: fixed;
+    overflow-y: scroll;
+    top: 0;
+    right: 0;
+    z-index: 1;
+    padding-right: 2vh;
+    line-height: 0.5;
+}
+
+.team-color {
+    height: 10%;
+    width: 80%;
+    border: 2px solid #111111;
+}
+
+.teamName h1{
+    font-size: 2.5vh;
+}
+
+.team-colorboard {
+    display: flex;
+    justify-content: space-between;
+    line-height: 1.5;
+    font-size: 1.8vh;
+    padding-left: 1vw;
+}
+
+.strip {
+    display: inline-block;
+    background-color: #ccc;
+    transform: skew(-20deg);
+    height: 1.8vh;
+    width: 0.5vw;
+    /* padding: 0.2vw; */
+    margin-right: 8px;
+  }
+
+
+
+
+
+
+
+
+
+@media (max-width: 1179px) {
+    .colorboard {
+        height: 85vh;
+        width: 100%;
+        padding-right: 0;
+        margin: 0;
+        margin-top: 1vh;
+    }
+
+    .title {
+        font-size: 2.7vw;
+    }
+
+    .title h1 div {
+        border-top: 5px solid #e10600;
+        border-top-right-radius: 25px;
+        border-right: 5px solid #e10600;
+        padding-right: 10px;
+        margin-right: 20px;
+    }
+
+    .team-color {
+        height: 8vh;
+        font-size: 1vh;
+    }
+
+    .teamName h1{
+        font-size: 1.8vh;
+    }
+
+    .colorboard {
+        width: 70%;
+    }
+}
