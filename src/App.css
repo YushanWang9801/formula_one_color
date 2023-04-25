@@ -13,10 +13,42 @@
     src: url("./assets/Formula1-Wide.ttf");
 } */
 
+:root{
+  --background: #111111;
+  --error: #811e3f;
+  --primary: #00a19c;
+
+  --accent: #3d3d3d;
+
+  --merc-silver: #c6c6c6;
+  --merc-red:  #7d1236;
+  --merc-red: rgba(129, 30,63, 0.4);
+
+  --blur-secondary: #72D0CE;
+  --blur-background: rgba(17, 17, 17, 0.4);
+
+}
+
+[data-theme="light"] {
+  --background: #e3e3c3;
+  --error: #7d1236;
+  --primary: #00a19c;
+  
+  --medium: #111111;
+  --blur-secondary: #72D0CE;
+  --blur-background: rgba(242, 244, 242, 0.4);
+}
+
 @font-face {
   font-family: optima;
   src: url("./assets/Optima.ttf");
 }
+
+::selection {
+  background: var(--merc-red);
+  color: #ebeaee;
+}
+
 
 *,
 *::before,
@@ -31,7 +63,7 @@
 body {
   margin: 0;
   border: 0;
-  background-color: #111111;
+  background-color: var(--background);
   color: #fff;
   font-family: f1, f1-bold, Verdana, Geneva, Tahoma, sans-serif;
   text-transform: uppercase;
@@ -66,7 +98,7 @@ body {
   text-indent: -0.1ch;
   font-family: optima, f1, f1-bold, f1-wide,
     Verdana, Geneva, Tahoma, sans-serif;
-  color: #00a19c;
+  color: var(--primary);
 }
 
 .title h1 div {
@@ -94,7 +126,7 @@ body {
 .team-color {
   height: 10%;
   width: 80%;
-  border: 2px solid #111111;
+  border: 2px solid var(--background);
 }
 
 .teamName h1 {
@@ -111,7 +143,7 @@ body {
 
 .strip {
   display: inline-block;
-  background-color: #ccc;
+  background-color: var(--background);
   transform: skew(-20deg);
   height: 1.8vh;
   width: 0.5vw;
@@ -119,6 +151,129 @@ body {
   margin-right: 8px;
 }
 
+.teamSection {
+  width: 40vw;
+  height: 100%;
+  background-color: #e3e3c3;
+  z-index: 0;
+
+  position: absolute;
+  margin-left: 8vw;
+  margin-right: 2vw;
+}
+
+.teamSection .teamTitle {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translate(-50%, -10%);
+  width: 100%;
+  height: 10%;
+  text-align: left;
+}
+.teamSection .teamTitle h1 {
+  margin-left: 5vw;
+}
+
+.teamSection .wallpaper {
+  background-image: url("./../public/test.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 25vh;
+  background-position: center;
+
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  z-index: 3;
+}
+
+.teamSection .strip {
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  color: black;
+}
+
+#s1 {
+  top: 70%;
+  left: 50%;
+  transform: translate(-50%, -70%);
+}
+
+#s2 {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -80%);
+}
+
+#s3 {
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -90%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1179px) {
+  .colorboard {
+    height: 85vh;
+    width: 100%;
+    padding-right: 0;
+    margin: 0;
+    margin-top: 1vh;
+  }
+
+  .title {
+    font-size: 2.7vw;
+  }
+
+  .title h1 div {
+    border-top: 5px solid #e10600;
+    border-top-right-radius: 25px;
+    border-right: 5px solid #e10600;
+    padding-right: 10px;
+    margin-right: 20px;
+  }
+
+  .team-color {
+    height: 8vh;
+    font-size: 1vh;
+  }
+
+  .teamName h1 {
+    font-size: 1.8vh;
+  }
+
+  .colorboard {
+    width: 70%;
+  }
+}
+
+
+/* IconSection */
 .iconSection {
   z-index: 1;
   top: 0;
@@ -133,7 +288,7 @@ body {
 .iconSection a {
   text-decoration: none;
   text-transform: none;
-  color: #00a19c;
+  color: var(--primary);
   font-family: optima, f1, f1-bold, f1-wide,
     Verdana, Geneva, Tahoma, sans-serif;
   font-size: 3vh;
@@ -241,44 +396,4 @@ body {
 
 .iconSection ul li:nth-child(4) .faicon {
   color: #fff !important;
-}
-
-
-
-
-
-
-@media (max-width: 1179px) {
-  .colorboard {
-    height: 85vh;
-    width: 100%;
-    padding-right: 0;
-    margin: 0;
-    margin-top: 1vh;
-  }
-
-  .title {
-    font-size: 2.7vw;
-  }
-
-  .title h1 div {
-    border-top: 5px solid #e10600;
-    border-top-right-radius: 25px;
-    border-right: 5px solid #e10600;
-    padding-right: 10px;
-    margin-right: 20px;
-  }
-
-  .team-color {
-    height: 8vh;
-    font-size: 1vh;
-  }
-
-  .teamName h1 {
-    font-size: 1.8vh;
-  }
-
-  .colorboard {
-    width: 70%;
-  }
 }
